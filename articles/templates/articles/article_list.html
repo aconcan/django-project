@@ -7,10 +7,17 @@
 </head>
 <body>
     <h1>article list</h1>
-    <ul>
-        <li>lovely article</li>
-        <li>another lovely article</li>
-        <li>another no so lovely article</li>
-    </ul>
+
+    <div class=articles>
+        <!-- outputting the data we passed in views.py in separate divs --> 
+        {% for article in articles %}
+            <div class='article'>
+                <h2><a href=''>{{ article.title }}</a></h2>
+                <p>{{ article.body }}</p>
+                <p>{{ article.date }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    
 </body>
 </html>
