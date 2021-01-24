@@ -10,3 +10,6 @@ class Article(models.Model):
     # defines how an article will look in the admin section and in the shell
     def __str__(self):
         return self.title
+
+    def snippet(self):
+        return self.body[:50]+'...'

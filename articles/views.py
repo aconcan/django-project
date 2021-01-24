@@ -5,5 +5,5 @@ from .models import Article
 def article_list(request):
     # Retrieving all Article objects from DB
     articles = Article.objects.all().order_by('date')
-    # Passing articles dictonary to the template, where we can then render the data
+    # Passing articles dictonary to the template. to render the data
     return render(request, 'articles/article_list.html', {'articles': articles})
